@@ -15,37 +15,37 @@
                    type="checkbox"
                    value="leche"
                    name="leche"
-                   v-model="desayuno">
+                   v-model="plan.desayuno">
               </td>
               <td><input 
                    type="checkbox"
                    value="proteina"
                    name="proteina"
-                   v-model="desayuno">
+                   v-model="plan.desayuno">
               </td>
               <td><input 
                    type="checkbox"
                    value="harinas"
                    name="harinas"
-                   v-model="desayuno">
+                   v-model="plan.desayuno">
               </td>
               <td><input 
                    type="checkbox"
                    value="verduras"
                    name="verduras"
-                   v-model="desayuno">
+                   v-model="plan.desayuno">
               </td>
               <td><input 
                    type="checkbox"
                    value="frutas"
                    name="frutas"
-                   v-model="desayuno">
+                   v-model="plan.desayuno">
               </td>
               <td><input 
                    type="checkbox"
                    value="leguminosas"
                    name="leguminosas"
-                   v-model="desayuno">
+                   v-model="plan.desayuno">
               </td>
           </tr>
           <tr>
@@ -54,37 +54,37 @@
                    type="checkbox"
                    value="leche"
                    name="leche"
-                   v-model="mediaManana">
+                   v-model="plan.mediaManana">
               </td>
               <td><input 
                    type="checkbox"
                    value="proteina"
                    name="proteina"
-                   v-model="mediaManana">
+                   v-model="plan.mediaManana">
               </td>
               <td><input 
                    type="checkbox"
                    value="harinas"
                    name="harinas"
-                   v-model="mediaManana">
+                   v-model="plan.mediaManana">
               </td>
               <td><input 
                    type="checkbox"
                    value="verduras"
                    name="verduras"
-                   v-model="mediaManana">
+                   v-model="plan.mediaManana">
               </td>
               <td><input 
                    type="checkbox"
                    value="frutas"
                    name="frutas"
-                   v-model="mediaManana">
+                   v-model="plan.mediaManana">
               </td>
               <td><input 
                    type="checkbox"
                    value="leguminosas"
                    name="leguminosas"
-                   v-model="mediaManana">
+                   v-model="plan.mediaManana">
               </td>
           </tr>
           <tr>
@@ -93,37 +93,37 @@
                    type="checkbox"
                    value="leche"
                    name="leche"
-                   v-model="almuerzo">
+                   v-model="plan.almuerzo">
               </td>
               <td><input 
                    type="checkbox"
                    value="proteina"
                    name="proteina"
-                   v-model="almuerzo">
+                   v-model="plan.almuerzo">
               </td>
               <td><input 
                    type="checkbox"
                    value="harinas"
                    name="harinas"
-                   v-model="almuerzo">
+                   v-model="plan.almuerzo">
               </td>
               <td><input 
                    type="checkbox"
                    value="verduras"
                    name="verduras"
-                   v-model="almuerzo">
+                   v-model="plan.almuerzo">
               </td>
               <td><input 
                    type="checkbox"
                    value="frutas"
                    name="frutas"
-                   v-model="almuerzo">
+                   v-model="plan.almuerzo">
               </td>
               <td><input 
                    type="checkbox"
                    value="leguminosas"
                    name="leguminosas"
-                   v-model="almuerzo">
+                   v-model="plan.almuerzo">
               </td>
           </tr>
           <tr>
@@ -132,37 +132,37 @@
                    type="checkbox"
                    value="leche"
                    name="leche"
-                   v-model="algo">
+                   v-model="plan.algo">
               </td>
               <td><input 
                    type="checkbox"
                    value="proteina"
                    name="proteina"
-                   v-model="algo">
+                   v-model="plan.algo">
               </td>
               <td><input 
                    type="checkbox"
                    value="harinas"
                    name="harinas"
-                   v-model="algo">
+                   v-model="plan.algo">
               </td>
               <td><input 
                    type="checkbox"
                    value="verduras"
                    name="verduras"
-                   v-model="algo">
+                   v-model="plan.algo">
               </td>
               <td><input 
                    type="checkbox"
                    value="frutas"
                    name="frutas"
-                   v-model="algo">
+                   v-model="plan.algo">
               </td>
               <td><input 
                    type="checkbox"
                    value="leguminosas"
                    name="leguminosas"
-                   v-model="algo">
+                   v-model="plan.algo">
               </td>
           </tr>
           <tr>
@@ -171,37 +171,37 @@
                    type="checkbox"
                    value="leche"
                    name="leche"
-                   v-model="cena">
+                   v-model="plan.cena">
               </td>
               <td><input 
                    type="checkbox"
                    value="proteina"
                    name="proteina"
-                   v-model="cena">
+                   v-model="plan.cena">
               </td>
               <td><input 
                    type="checkbox"
                    value="harinas"
                    name="harinas"
-                   v-model="cena">
+                   v-model="plan.cena">
               </td>
               <td><input 
                    type="checkbox"
                    value="verduras"
                    name="verduras"
-                   v-model="cena">
+                   v-model="plan.cena">
               </td>
               <td><input 
                    type="checkbox"
                    value="frutas"
                    name="frutas"
-                   v-model="cena">
+                   v-model="plan.cena">
               </td>
               <td><input 
                    type="checkbox"
                    value="leguminosas"
                    name="leguminosas"
-                   v-model="cena">
+                   v-model="plan.cena">
               </td>
           </tr>
           <tr>
@@ -210,63 +210,77 @@
                    type="checkbox"
                    value="leche"
                    name="leche"
-                   v-model="refrigerio">
+                   v-model="plan.refrigerio">
               </td>
               <td><input 
                    type="checkbox"
                    value="proteina"
                    name="proteina"
-                   v-model="refrigerio">
+                   v-model="plan.refrigerio">
               </td>
               <td><input 
                    type="checkbox"
                    value="harinas"
                    name="harinas"
-                   v-model="refrigerio">
+                   v-model="plan.refrigerio">
               </td>
               <td><input 
                    type="checkbox"
                    value="verduras"
                    name="verduras"
-                   v-model="refrigerio">
+                   v-model="plan.refrigerio">
               </td>
               <td><input 
                    type="checkbox"
                    value="frutas"
                    name="frutas"
-                   v-model="refrigerio">
+                   v-model="plan.refrigerio">
               </td>
               <td><input 
                    type="checkbox"
                    value="leguminosas"
                    name="leguminosas"
-                   v-model="refrigerio">
+                   v-model="plan.refrigerio">
               </td>
           </tr>
         </table>
        <br>
-       <button @click="guardarPlan">Enviar</button> 
+       <button @click="enviarPlan">Enviar</button> 
 </template>
      
 <script>
   export default {
         data () {
             return {
-                  tienePlan: false,
+               plan:{  
                   desayuno:[],
                   mediaManana:[],
                   almuerzo:[],
                   algo:[],
                   cena:[],
-                  refrigerio:[],
-                  tipoAlimentos: ['leche','proteina','harinas','verduras','frutas','leguminosas']
+                  refrigerio:[]
+               },
+               tipoAlimentos: ['leche','proteina','harinas','verduras','frutas','leguminosas']
             }
         },
         methods:{
-          guardarPlan(){
-              console.log('planNutricional')
-              console.log(this.desayuno)
-          }
+          async enviarPlan(){
+           try{
+              await this.$store.dispatch('plan/registroPlan', {
+               desayuno:this.plan.desayuno,
+               mediaManana:this.plan.mediaManana,
+               almuerzo:this.plan.almuerzo,
+               algo:this.plan.algo,
+               cena:this.plan.cena,
+               refrigerio:this.plan.refrigerio
+              });
+           } catch(err){
+              this.error = err.message || 'Fallo envio'
+           }
+           
+           this.$router.replace('/home')
+        }
+
         }
         
   }

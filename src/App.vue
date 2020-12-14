@@ -1,11 +1,7 @@
 <template>
-    <div class="container">
+    <div>
       <navegacion></navegacion>
-      <router-view class="mt-5"></router-view>
-      <tiene-plan></tiene-plan>
-      <div>
-        <select-intolerancias></select-intolerancias>
-      </div>
+      <router-view></router-view>
     </div>
 </template>
 

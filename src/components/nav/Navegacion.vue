@@ -1,5 +1,5 @@
 <template>
-<ul class="nav justify-content-end">
+<!-- <ul class="nav justify-content-end">
   <li class="nav-item">
     <router-link class="nav-link active border-bottom" to="/login">Iniciar sesión</router-link>
   </li>
@@ -26,5 +26,38 @@
   <li class="nav-item">
     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
   </li>
+</ul>-->
+<ul>
+  <li v-if="!isLoggedIn">
+    <router-link to="/login">Iniciar sesión</router-link>
+  </li>
+   <li v-if="!isLoggedIn">
+    <router-link to="/registro">Registrate</router-link>
+  </li>
+   <li>
+    <router-link to="/home">Home</router-link>
+  </li>
+  <li>
+    <router-link to="/plan">Plan nutricional</router-link>
+  </li>
+  <li>
+    <router-link to="/minuta">Minuta</router-link>
+  </li>
+  <li v-if="isLoggedIn">
+    <a  href="#">Usuario</a>
+  </li>
+  <li >
+    <a >Disabled</a>
+  </li>
 </ul>
 </template>
+
+<script>
+export default {
+   computed: {
+     isLoggedIn(){
+       return this.$store.getters['usuarios/estaAutenticado']
+     }
+   }
+}
+</script>

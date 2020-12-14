@@ -1,5 +1,6 @@
 import {createRouter, createWebHistory} from 'vue-router';
 
+import IniciarSesion from './pages/IniciarSesion.vue';
 import Home from './pages/Home.vue';
 import Minuta from './pages/Minuta.vue';
 import NotFound from './pages/NotFound.vue';
@@ -11,7 +12,8 @@ import RegistroUsuario from './pages/RegistroUsuario.vue';
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        { path: '/', redirect:'/home'},
+        { path: '/', redirect:'/login'},
+        { path: '/login', component:IniciarSesion},
         { path: '/registro', component:RegistroUsuario},
         { path: '/home', component:Home},
         { path: '/plan', component:PlanNutricional},
