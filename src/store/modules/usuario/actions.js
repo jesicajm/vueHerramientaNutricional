@@ -1,17 +1,24 @@
 export default {
     async registroUsuario(context,data){
-        const nuevoUsuario = {
-          nombre: data.nombre,
-          email: data.email,
-          password: data.password,
-          confirmPassword : data.confirmPassword
-        };
-       const response = await fetch('http://localhost:3000/registro', {
-          method: 'PUT',
+        const graphqlQuery = {
+          query: `
+            mutation {
+              crearUsuario(userInput: {
+                nombre:"${data.nombre}",
+                email:"${data.email}", 
+                password:"${data.password}",confirmPassword:"${data.confirmPassword}"}){
+                  _id
+                  email
+                }
+            }
+          `
+        }; 
+       const response = await fetch('http://localhost:3000/graphql', {
+          method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(nuevoUsuario)
+          body: JSON.stringify(graphqlQuery)
        });
 
       const responseData = await response.json();
@@ -29,15 +36,22 @@ export default {
      });
     },
     async enviarDatosUsuario(context,data){
-     const response = await fetch('http://localhost:3000/login', {
+      const graphqlQuery = {
+        query: `
+         {
+            login(email:"${data.email}", password:"${data.password}"){
+              token
+              usuarioId
+            }
+          }
+        `
+      }; 
+     const response = await fetch('http://localhost:3000/graphql', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        email: data.email,
-        password: data.password,
-      })
+      body: JSON.stringify(graphqlQuery)
    });
 
     const responseData = await response.json();
@@ -51,8 +65,8 @@ export default {
      console.log(responseData);
 
      context.commit('setUsuario', {
-        token: responseData.token,
-        usuarioId: responseData.userId
+        token: responseData.data.login.token,
+        usuarioId: responseData.data.login.usuarioId
      });
   },
 
