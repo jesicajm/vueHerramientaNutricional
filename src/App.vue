@@ -1,7 +1,9 @@
 <template>
-    <div>
+    <div class="container">
       <navegacion></navegacion>
-      <router-view></router-view>
+      <main>
+        <router-view class="mt-5"></router-view>
+      </main>
     </div>
 </template>
 

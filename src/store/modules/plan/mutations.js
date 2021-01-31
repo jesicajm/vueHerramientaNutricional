@@ -16,7 +16,7 @@ export default {
         state.plan.refrigerio = payload.refrigerio;
     },
     setTienePlan(state){
-        state.TienePlan = true;
+        state.tienePlan = true;
     },
     setFetchTimestamp(state){
        state.ultimaBusqueda = new Date().getTime();

@@ -8,7 +8,6 @@ export default {
                 email:"${data.email}", 
                 password:"${data.password}",confirmPassword:"${data.confirmPassword}"}){
                   _id
-                  email
                 }
             }
           `
@@ -30,10 +29,6 @@ export default {
        }
 
        console.log(responseData);
-
-       context.commit('usuarioCreado', {
-        usuarioId: responseData.usuarioId
-     });
     },
     async enviarDatosUsuario(context,data){
       const graphqlQuery = {

@@ -22,8 +22,6 @@ export default {
        }; 
 
        const token = context.rootGetters['usuarios/token']
-
-       console.log(graphqlQuery);
    
        const response = await fetch('http://localhost:3000/graphql', {
           method: 'POST',
@@ -35,13 +33,14 @@ export default {
        });
 
       const responseData = await response.json();
+      console.log(responseData)
 
        if(!response.ok){
          const error = new Error(responseData.message || 'Failed to authenticate!');
          throw error;
        }
 
-       context.commit('registroPlan', payload);
+       context.commit('registroPlan', responseData.data.guardarPlanNutricional);
        context.commit('setTienePlan');
     },
     async cargaPlanUsuario(context){
@@ -60,7 +59,7 @@ export default {
         `
       }; 
       if(!context.getters.tienePlan && !context.getters.shouldUpdate){
-         return;
+         return;   
       }
       
       const token = context.rootGetters['usuarios/token']

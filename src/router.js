@@ -1,12 +1,14 @@
 import {createRouter, createWebHistory} from 'vue-router';
 
 import IniciarSesion from './pages/IniciarSesion.vue';
+import RegistroUsuario from './pages/RegistroUsuario.vue';
 import Home from './pages/Home.vue';
 import Minuta from './pages/Minuta.vue';
-import NotFound from './pages/NotFound.vue';
-import Perfil from './pages/Perfil.vue';
 import PlanNutricional from './pages/PlanNutricional.vue';
-import RegistroUsuario from './pages/RegistroUsuario.vue';
+import PlanificarMinuta from './pages/PlanificarMinuta.vue';
+import Perfil from './pages/Perfil.vue';
+import NotFound from './pages/NotFound.vue';
+
 
 
 const router = createRouter({
@@ -17,6 +19,7 @@ const router = createRouter({
         { path: '/registro', component:RegistroUsuario},
         { path: '/home', component:Home},
         { path: '/plan', component:PlanNutricional},
+        { path: '/planificar', component:PlanificarMinuta},
         { path: '/minuta', component:Minuta},
         { path: '/perfil', component:Perfil},
         { path: '/:notFound(.*)', component: NotFound},

@@ -41,6 +41,9 @@
     <router-link to="/plan">Plan nutricional</router-link>
   </li>
   <li>
+    <router-link to="/planificar">Planificar menus</router-link>
+  </li>
+  <li>
     <router-link to="/minuta">Minuta</router-link>
   </li>
   <li v-if="isLoggedIn">

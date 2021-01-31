@@ -12,5 +12,14 @@ export default {
     },
     planUsuario(state){
       return state.plan;
+    },
+    comidasDia(state){
+      const comidasDia = [];
+      for(const comida in state.plan){
+        if(comida[0] !== ''){
+          comidasDia.push(comida);
+        }   
+      }
+      return comidasDia;     
     }
 }
